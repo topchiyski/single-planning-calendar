@@ -72,3 +72,6 @@ selenium/target/maven-status/maven-compiler-plugin/compile/default-compile/input
 *.iml
 selenium/target/
 selenium/.idea/
+.idea/
+target/classes/drivers/chromedriver.exe
+target/
