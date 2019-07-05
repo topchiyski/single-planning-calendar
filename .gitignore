@@ -66,3 +66,9 @@ fabric.properties
 
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
+selenium/.idea/compiler.xml
+*.class
+selenium/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+*.iml
+selenium/target/
+selenium/.idea/
