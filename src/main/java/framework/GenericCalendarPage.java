@@ -3,8 +3,11 @@ package framework;
 import enumerations.CalendarView;
 import enumerations.SwitchButton;
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
@@ -78,5 +81,17 @@ public abstract class GenericCalendarPage {
                 return (switchButtons.get(2).getAttribute("aria-checked")).equalsIgnoreCase("true");
         }
         return false;
+    }
+
+    public boolean waitForElementToLoad(By locator, long timeOutInSeconds) {
+        boolean result = true;
+        WebDriverWait wait = new WebDriverWait(webDriver, timeOutInSeconds);
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+
+        } catch (TimeoutException timeoutException) {
+            result = false;
+        }
+        return result;
     }
 }
