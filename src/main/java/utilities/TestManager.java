@@ -22,7 +22,7 @@ public class TestManager {
             webDriver = new FirefoxDriver();
         }
         webDriver.manage().window().maximize();
-        int defaultImpliocitWaitInterval = 3000;
+        int defaultImpliocitWaitInterval = 3;
         webDriver.manage().timeouts().implicitlyWait(defaultImpliocitWaitInterval, TimeUnit.SECONDS);
     }
 
